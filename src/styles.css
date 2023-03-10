@@ -1,0 +1,96 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* StarRez Base Styles */
+main {
+  display: grid;
+  grid-template-areas: "header header" "aside section";
+  grid-template-rows: 50px auto;
+  grid-template-columns: 300px auto;
+  width: 100vw;
+  /* overflow: scroll; */
+}
+
+main > header {
+  grid-area: header;
+  background: #0075db;
+  align-self: start;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+main > header > div {
+  height: 50px;
+}
+
+main > aside {
+  grid-area: aside;
+  background: #c0d6ee;
+  position: sticky;
+
+  top: 50px;
+  left: 0;
+}
+
+main > section {
+  position: relative;
+  padding: 20px;
+}
+
+main > section > article {
+  display: grid;
+  grid-gap: 16px;
+  padding-bottom: 100px;
+}
+
+main > section > article > header {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  position: sticky;
+  top: 50px;
+  background-color: white;
+  z-index: 50;
+}
+
+main > section > article > nav {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 50px 50px 50px;
+  align-items: center;
+}
+
+.box {
+  border: 1px solid #dae5ec;
+  height: 250px;
+}
+
+.ag-theme-alpine .ag-paging-panel {
+  position: fixed;
+  z-index: 1000;
+  right: 10px;
+  bottom: 10px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.fix .ag-theme-alpine .ag-header {
+  top: 100px;
+  position: fixed;
+  width: auto;
+  display: table;
+  z-index: 50;
+}
+.ag-theme-alpine .ag-root-wrapper {
+  border: none !important;
+}
